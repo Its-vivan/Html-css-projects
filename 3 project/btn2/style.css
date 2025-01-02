@@ -1,0 +1,64 @@
+*{
+  margin: 0 0 0 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #989BBC;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  border: 2px solid #98B9BC;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  position: relative;
+}
+
+a::before {
+  content: "DOWNLOAD";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #AFADA6;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: all 0.5s;
+}
+
+a::after {
+  content: "like";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotateX(270deg);
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  transform-origin: top;
+  transition-delay: 0.25s;
+}
+
+a:hover::before,
+a:hover::after{
+  transform: rotateX(0deg);
+}
+

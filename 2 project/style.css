@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 300px;
+  width: 300px;
+  background: transparent;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.container .clip {
+  transition: all 0.4s;
+}
+.clip.clip1 {
+  background: url("/assets/imagesComputer.jpeg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 0, 46% 0, 39% 100%, 0% 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.clip.clip2 {
+  background: url("/assets/Screenshot_2024-12-01-21-57-33-96_40deb401b9ffe8e1df2f1cc5ba480b12.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: right;
+  clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+}
+
+.clip.clip3 {
+  background: url("/assets/Screenshot_2024-12-10-19-17-15-35_6012fa4d4ddec268fc5c7112cbb265e7.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
+}
+
+
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}

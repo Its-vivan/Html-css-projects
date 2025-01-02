@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container button {
+  padding: 1.5rem 6rem;
+  background: #242C85;
+  color: #fff;
+  border: none;
+  position: relative;
+}
+
+.container button::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  height: 20px;
+  width: 20px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transition: all 0.5s;
+}
+
+.container button::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transition: all 0.5s;
+}
+
+.container button:hover::after,
+button:hover::before{
+  height: 101%;
+  width: 101%;
+}
+
